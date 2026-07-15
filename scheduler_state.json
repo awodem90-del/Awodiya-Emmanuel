@@ -1,0 +1,36 @@
+{
+  "last_alerts": {
+    "USD/CAD:LOWER": {
+      "confidence": 52,
+      "at": "2026-07-14T16:57:35.713338+00:00"
+    },
+    "AUD/USD:HIGHER": {
+      "confidence": 34,
+      "at": "2026-07-14T17:02:43.255074+00:00"
+    },
+    "GBP/USD:LOWER": {
+      "confidence": 60,
+      "at": "2026-07-14T15:53:59.656323+00:00"
+    },
+    "EUR/USD:HIGHER": {
+      "confidence": 43,
+      "at": "2026-07-14T15:26:06.586701+00:00"
+    },
+    "GBP/USD:HIGHER": {
+      "confidence": 52,
+      "at": "2026-07-14T16:42:12.315374+00:00"
+    },
+    "EUR/USD:LOWER": {
+      "confidence": 43,
+      "at": "2026-07-14T16:52:27.269514+00:00"
+    },
+    "AUD/USD:LOWER": {
+      "confidence": 42,
+      "at": "2026-07-14T04:59:16.373591+00:00"
+    },
+    "USD/CAD:HIGHER": {
+      "confidence": 60,
+      "at": "2026-07-14T16:03:58.257596+00:00"
+    }
+  }
+}

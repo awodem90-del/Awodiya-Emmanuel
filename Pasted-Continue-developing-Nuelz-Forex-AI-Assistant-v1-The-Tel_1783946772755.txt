@@ -1,0 +1,313 @@
+Continue developing Nuelz Forex AI Assistant v1.
+
+The Telegram bot is already working. Now implement the complete AI market scanning engine and improve the user experience.
+
+## Continuous Market Scanning
+
+The AI must continuously scan the Forex market in the background every 60 seconds.
+
+Monitor:
+
+- EUR/USD
+- GBP/USD
+- AUD/USD
+- USD/CAD
+
+For each scan:
+
+- Download the latest market data.
+- Calculate RSI (7), EMA 50, EMA 200, MACD, market trend, and volatility.
+- Score every setup using the AI Confidence Engine.
+- Save the best trading opportunities internally.
+
+Do NOT send every scan to Telegram automatically.
+
+The bot should quietly keep scanning and updating its analysis until the user requests signals.
+
+---
+
+## /signal User Experience
+
+When the user sends:
+
+/signal
+
+Do NOT immediately send a trade.
+
+Instead, display an inline keyboard with three buttons:
+
+🟢 1 Trade
+
+🟡 2 Trades
+
+🔴 3 Trades
+
+Add a message above the buttons:
+
+"📊 Choose how many of the highest-confidence trading opportunities you would like to receive."
+
+Wait for the user's selection.
+
+---
+
+## Trade Selection Logic
+
+If the user chooses:
+
+🟢 1 Trade
+
+Return ONLY the single highest-confidence trading setup.
+
+If the user chooses:
+
+🟡 2 Trades
+
+Return ONLY the two highest-confidence setups.
+
+If the user chooses:
+
+🔴 3 Trades
+
+Return ONLY the three highest-confidence setups.
+
+Never return more trades than requested.
+
+---
+
+## Signal Quality Rules
+
+The AI should prioritize quality over quantity.
+
+Never generate signals simply to satisfy a request.
+
+Only return trades that meet the configured confidence threshold.
+
+If the user requests three trades but only one qualifies, send the one qualifying trade and explain that no additional setups currently meet the confidence requirement.
+
+If no trade qualifies, send a professional message explaining that there are currently no high-confidence opportunities.
+
+---
+
+## AI Confidence Engine
+
+Use:
+
+- RSI
+- EMA 50
+- EMA 200
+- MACD
+- Trend Strength
+- Volatility
+- Price Momentum
+
+Generate an AI Confidence Score between 0% and 100%.
+
+Only recommend trades when they satisfy the configured confidence threshold.
+
+Do not claim guaranteed profits or guaranteed winning trades.
+
+---
+
+## Professional Trade Signal Format
+
+🚨 TRADE NOW!! 🚨
+
+━━━━━━━━━━━━━━━━━━
+
+📈 Asset: EUR/USD
+
+🟩 Direction: BUY
+
+⏰ Recommended Duration: 15 Minutes
+
+🕒 Entry Time: 14:35
+
+🤖 AI Confidence: 91%
+
+━━━━━━━━━━━━━━━━━━
+
+📊 Technical Analysis
+
+✅ RSI: Oversold
+
+✅ EMA Trend: Bullish
+
+✅ MACD: Bullish Crossover
+
+✅ Market Strength: Strong
+
+━━━━━━━━━━━━━━━━━━
+
+⚠️ Risk Level: Medium
+
+💡 AI Summary:
+
+Briefly explain why this setup is one of the strongest opportunities available based on the technical analysis.
+
+---
+
+## User Interface
+
+The bot should feel like a premium AI trading assistant.
+
+Use:
+
+- Clean formatting
+- Emojis
+- Section dividers
+- Professional spacing
+- Clear explanations
+
+Every response should be visually attractive and easy to read.
+
+---
+
+## Future-Ready Design
+
+Structure the project so it can later support:
+
+- MetaTrader 5
+- Exness integration
+- VPS deployment
+- Automatic signal scheduling
+- Signal history
+- Performance statistics
+- AI learning improvements
+- Web dashboard
+- Mobile application
+
+Keep the code modular, well commented, and easy to expand.
+
+## Daily Greeting System
+
+Add a scheduled greeting feature to Nuelz Forex AI.
+
+The bot should automatically send personalized greetings every day.
+
+Greeting Schedule:
+
+🌅 Morning:
+8:00 AM
+
+☀️ Afternoon:
+1:00 PM
+
+🌙 Evening:
+7:00 PM
+
+Address the user as:
+
+NuelzDigitalz
+
+### Morning Message
+
+🌅 Good Morning, NuelzDigitalz!
+
+Welcome to a new trading day.
+
+📊 Nuelz Forex AI is online and continuously monitoring the Forex market for high-confidence opportunities.
+
+💡 Stay disciplined, follow your trading plan, and remember that quality setups are more important than the number of trades.
+
+Have a productive and profitable day! 🚀
+
+━━━━━━━━━━━━━━━━━━
+
+### Afternoon Message
+
+☀️ Good Afternoon, NuelzDigitalz!
+
+Your AI assistant is still actively scanning the market.
+
+📈 If high-confidence setups are detected, they will be ready when you request them.
+
+Stay patient and trade only when the market provides strong opportunities.
+
+Happy trading! 📊
+
+━━━━━━━━━━━━━━━━━━
+
+### Evening Message
+
+🌙 Good Evening, NuelzDigitalz!
+
+Today's market monitoring is coming to an end.
+
+📊 Take a moment to review your trades, learn from today's market movements, and prepare for tomorrow.
+
+Thank you for using Nuelz Forex AI.
+
+Wishing you a relaxing evening and successful trading ahead. 🚀
+
+━━━━━━━━━━━━━━━━━━
+
+Requirements:
+
+- Send each greeting only once per day.
+- Use the server's local time or a configurable timezone.
+- Allow the greeting times to be changed easily in the configuration.
+- Keep the messages friendly, professional, and motivationa
+
+## Personal Greeting & Celebration System
+
+Add a personal notification system to Nuelz Forex AI.
+
+The bot should automatically send personalized celebration messages to the owner of the bot.
+
+The owner's display name is:
+
+NuelzDigitalz
+
+### 1. Happy New Month
+
+At 12:01 AM on the first day of every month, automatically send:
+
+🎉 Happy New Month, NuelzDigitalz!
+
+Welcome to a brand-new month filled with fresh opportunities.
+
+May this month bring wisdom, discipline, consistency, and profitable trading decisions.
+
+🤖 Nuelz Forex AI is online and ready to help you identify high-quality market opportunities.
+
+Wishing you a successful and productive month ahead! 🚀📈
+
+━━━━━━━━━━━━━━━━━━
+
+### 2. Birthday Celebration
+
+Every year on July 19, automatically send:
+
+🎂 Happy Birthday, NuelzDigitalz! 🎉🎈
+
+Today is a special day!
+
+On behalf of Nuelz Forex AI, thank you for creating and continuously improving this project.
+
+May this new year of your life bring:
+
+🎯 Greater wisdom
+
+📈 More success
+
+💰 Financial growth
+
+🚀 Bigger achievements
+
+❤️ Good health and happiness
+
+May all your dreams and goals continue to become reality.
+
+Enjoy your special day and have an amazing birthday! 🎁🥳
+
+━━━━━━━━━━━━━━━━━━
+
+### Requirements
+
+- Send each celebration only once on the scheduled date.
+- Allow the owner's name and birthday to be configured in the settings.
+- Use the configured timezone so messages are sent at the correct local time.
+- Do not send duplicate greetings if the bot restarts.
+- Keep the messages warm, professional, and motivational.
+
+Craft all of them today 

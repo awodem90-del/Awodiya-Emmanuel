@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nuelz Binary AI — IQ Option Signals</title>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">Nz</span>
+    <div>
+      <h1>Nuelz Binary AI</h1>
+      <p class="subtitle">IQ Option HIGHER / LOWER signals &middot; analysis only, never auto-trades</p>
+    </div>
+  </div>
+  <div class="status-group">
+    <div class="status" id="session-pill">session&hellip;</div>
+    <div class="status" id="market-pill">feed&hellip;</div>
+    <div class="status" id="status-pill">connecting&hellip;</div>
+    <a class="status" href="/logout" style="text-decoration:none;">Log out</a>
+  </div>
+</header>
+
+<main>
+  <section class="best-card" id="best-card">
+    <h2>Current Best Setup</h2>
+    <div id="best-content" class="best-content">Waiting for first scan&hellip;</div>
+  </section>
+
+  <section>
+    <h2>Monitored Pairs <span class="muted" id="last-scan"></span></h2>
+    <div class="pairs-grid" id="pairs-grid"></div>
+  </section>
+
+  <section>
+    <h2>Signal History</h2>
+    <div id="history-list" class="history-list"></div>
+  </section>
+</main>
+
+<footer>
+  Analysis engine: EMA 20/50/200 &middot; RSI(7) &middot; MACD(12,26,9) &middot; Bollinger Bands &middot; ADX &middot;
+  ROC momentum &middot; support/resistance &middot; breakout &amp; fake-breakout detection &middot; candlestick patterns
+  &middot; multi-timeframe confirmation.<br />
+  Confidence: 🟢 Very High {{ very_high_confidence }}%+ &middot; 🟢 High {{ high_confidence }}-{{ very_high_confidence - 1 }}%
+  &middot; 🟡 Medium {{ medium_confidence }}-{{ high_confidence - 1 }}% &middot; 🔵 Low {{ low_confidence }}-{{ medium_confidence - 1 }}%
+  &middot; 🔴 Very Low below {{ low_confidence }}%. Signals are never hidden.<br />
+  Auto-push to Telegram every scan cycle: {{ "on" if auto_alerts else "off (use /signal)" }}. No Stop Loss, Take Profit,
+  Trailing Stop or Risk/Reward — those don't exist in IQ Option binary options. This tool provides market analysis only
+  and never places trades automatically.
+</footer>
+
+<script src="/static/dashboard.js"></script>
+</body>
+</html>

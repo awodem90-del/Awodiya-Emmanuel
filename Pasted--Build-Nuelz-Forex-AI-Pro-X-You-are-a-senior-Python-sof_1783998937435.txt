@@ -1,0 +1,727 @@
+# 🤖 Build Nuelz Forex AI Pro X
+
+You are a senior Python software engineer, AI engineer, quantitative analyst, UI/UX designer, and Telegram bot developer.
+
+Build a complete production-ready application called **Nuelz Forex AI Pro X**.
+
+Nuelz Forex AI Pro X is a private AI-powered Forex market analysis assistant that continuously monitors the Forex market, performs advanced technical analysis, identifies high-confidence trading opportunities, and delivers beautifully formatted market analysis through Telegram and a modern web dashboard.
+
+The application must NEVER claim guaranteed profits or guaranteed winning trades.
+
+The application provides professional market analysis and alerts only.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Core Architecture
+
+Build the application using a clean modular architecture.
+
+Modules include:
+
+• Configuration
+
+• Telegram Bot
+
+• Web Dashboard
+
+• Live Market Scanner
+
+• Technical Analysis Engine
+
+• AI Confidence Engine
+
+• Signal Manager
+
+• News Filter
+
+• Scheduler
+
+• Security System
+
+• Logging
+
+• Performance Tracking
+
+• Error Handling
+
+The code must be clean, modular, reusable, documented and easy to expand.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Market Data
+
+Use Twelve Data API as the primary market data provider.
+
+The application must be designed so another provider can easily replace Twelve Data in the future.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Forex Market Scanner
+
+The AI must ONLY analyze Forex currency pairs.
+
+Do NOT analyze:
+
+❌ Crypto
+
+❌ Stocks
+
+❌ Commodities
+
+❌ ETFs
+
+❌ Indices
+
+Scan all supported Forex pairs including:
+
+Major Pairs
+
+• EUR/USD
+
+• GBP/USD
+
+• AUD/USD
+
+• NZD/USD
+
+• USD/CAD
+
+• USD/CHF
+
+• USD/JPY
+
+Cross Pairs
+
+• EUR/GBP
+
+• EUR/JPY
+
+• EUR/CHF
+
+• EUR/AUD
+
+• GBP/JPY
+
+• GBP/CHF
+
+• GBP/AUD
+
+• AUD/JPY
+
+• AUD/CAD
+
+• AUD/NZD
+
+• NZD/JPY
+
+• NZD/CAD
+
+• CAD/JPY
+
+• CHF/JPY
+
+The AI must automatically detect every supported Forex pair available through the market data provider.
+
+If OTC Forex pairs are available, automatically include them.
+
+Ignore unavailable assets.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Continuous Market Scanning
+
+The AI must continuously scan the Forex market 24 hours a day, 7 days a week.
+
+Every 30 seconds:
+
+• Download fresh market data
+
+• Refresh indicators
+
+• Update AI confidence
+
+• Save only qualified opportunities internally
+
+Never spam Telegram.
+
+Only send opportunities when:
+
+• User requests them
+
+or
+
+• Auto Alerts are enabled.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Technical Analysis
+
+Use:
+
+RSI (7)
+
+EMA 50
+
+EMA 200
+
+MACD
+
+ATR (14)
+
+Momentum
+
+Trend Strength
+
+Volatility
+
+Support & Resistance
+
+Market Session
+
+Multi-Timeframe Confirmation (1M–5M)
+
+Reject weak or conflicting opportunities.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# AI Confidence Engine
+
+Generate an AI Confidence Score from 0–100%.
+
+Default minimum confidence:
+
+70%
+
+Allow changing from Settings:
+
+65%
+
+70%
+
+75%
+
+80%
+
+Higher confidence should produce fewer but stronger opportunities.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Smart Dynamic Signal Scanner
+
+Whenever the user presses:
+
+📈 Get Signals
+
+or sends
+
+/signal
+
+The AI must NOT instantly send opportunities.
+
+Instead perform a fresh market scan.
+
+Workflow:
+
+1.
+
+Scan every available Forex pair.
+
+2.
+
+Calculate every technical indicator.
+
+3.
+
+Score every pair.
+
+4.
+
+Rank every pair.
+
+5.
+
+Return only the requested number of opportunities.
+
+Never reuse old opportunities.
+
+Every request must trigger a fresh market analysis.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Premium AI Scanning Experience
+
+When scanning begins display:
+
+🤖 Nuelz Forex AI Pro X
+
+━━━━━━━━━━━━━━━━━━
+
+🔍 Scanning the live Forex market...
+
+📡 Connecting to market data...
+
+Please wait while AI analyzes current market conditions...
+
+━━━━━━━━━━━━━━━━━━
+
+Then display progress:
+
+Downloading prices...
+
+Calculating RSI...
+
+Calculating EMA...
+
+Calculating MACD...
+
+Calculating ATR...
+
+Checking momentum...
+
+Checking trend...
+
+Checking volatility...
+
+Checking news...
+
+Ranking opportunities...
+
+Then show:
+
+Market Scan Complete
+
+Forex pairs analyzed
+
+Qualified opportunities
+
+Rejected opportunities
+
+Then ask:
+
+📊 Choose how many of the highest-confidence trading opportunities you would like to receive.
+
+Buttons:
+
+🟢 1 Trade
+
+🟡 2 Trades
+
+🔴 3 Trades
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Signal Selection
+
+If user selects:
+
+1 Trade
+
+Return only the highest-confidence opportunity.
+
+2 Trades
+
+Return only the top two.
+
+3 Trades
+
+Return only the top three.
+
+Never send more opportunities than requested.
+
+If fewer qualify explain why.
+
+If none qualify explain professionally that market conditions are not suitable.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Signal Format
+
+Every opportunity must use premium formatting.
+
+🚨 TRADE OPPORTUNITY 🚨
+
+━━━━━━━━━━━━━━━━━━
+
+📈 Asset
+
+🟢 Direction
+
+⏱ Recommended Duration
+
+(1M–5M depending on market conditions)
+
+🕒 Entry Time
+
+(Two minutes after signal generation)
+
+🤖 AI Confidence
+
+━━━━━━━━━━━━━━━━━━
+
+📊 Technical Analysis
+
+✅ RSI
+
+✅ EMA Trend
+
+✅ MACD
+
+✅ ATR
+
+✅ Momentum
+
+✅ Trend Strength
+
+━━━━━━━━━━━━━━━━━━
+
+⚠ Risk Level
+
+━━━━━━━━━━━━━━━━━━
+
+💡 AI Summary
+
+Explain why this opportunity ranked among the strongest.
+
+Buttons:
+
+🚀 Open IQ Option
+
+🔄 Refresh Signals
+
+📊 Market Status
+
+📜 Signal History
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Telegram Bot
+
+Everything should work primarily through buttons instead of typed commands.
+
+Home Menu
+
+🏠 HOME
+
+📈 Get Signals
+
+📊 Market
+
+💰 Wallet
+
+📜 History
+
+📰 News
+
+📈 Performance
+
+⚙ Settings
+
+👤 Profile
+
+🚀 IQ Option
+
+❓ Help
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Welcome Screen
+
+When user presses Start send:
+
+🤖 Welcome to Nuelz Forex AI Pro X
+
+Hello, NuelzDigitalz! 👋
+
+Your private AI-powered Forex market analysis assistant is now online.
+
+📊 Live market scanning is active.
+
+⚡ Features
+
+✅ Continuous AI Scanning
+
+✅ Smart Forex Scanner
+
+✅ RSI Analysis
+
+✅ EMA Trend Detection
+
+✅ MACD Confirmation
+
+✅ ATR Volatility Analysis
+
+✅ Momentum Analysis
+
+✅ Multi-Timeframe Confirmation
+
+✅ AI Confidence Engine
+
+✅ News Protection
+
+✅ Signal History
+
+✅ Performance Tracking
+
+Use the buttons below to begin.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Market Status
+
+Display:
+
+Current AI Status
+
+Current Trend
+
+Current Session
+
+Market Volatility
+
+News Status
+
+Last Scan
+
+Next Scan
+
+Assets Being Monitored
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Wallet
+
+Display:
+
+Practice / Real
+
+Balance
+
+Today's Profit
+
+Last Updated
+
+Buttons:
+
+Refresh
+
+Open IQ Option
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Signal History
+
+Display latest opportunities including:
+
+Asset
+
+Direction
+
+Confidence
+
+Time
+
+Status
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# News
+
+Display:
+
+Upcoming High Impact News
+
+Currencies
+
+Pause Status
+
+Resume Time
+
+Commands:
+
+/news
+
+/pause
+
+/resume
+
+Automatically pause signal generation 30 minutes before and after high-impact news.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Performance
+
+Display:
+
+Today's Opportunities
+
+Win Rate (based on manually recorded results)
+
+Average Confidence
+
+Best Pair
+
+Weekly Summary
+
+Monthly Summary
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Settings
+
+Allow configuration of:
+
+Confidence Threshold
+
+Auto Alerts
+
+Greeting Times
+
+Timezone
+
+Daily Password
+
+Theme
+
+Notifications
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Security
+
+Private bot.
+
+Owner only.
+
+Use Telegram Owner ID verification.
+
+Owner Name:
+
+NuelzDigitalz
+
+Every day at 6:00 AM WAT (GMT+1), require authentication before providing analysis.
+
+Store the password securely as an environment variable or hashed value.
+
+Do not hard-code the password.
+
+Unlock the AI for the remainder of the day after successful authentication.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Greetings
+
+Automatically send:
+
+🌅 Good Morning
+
+☀ Good Afternoon
+
+🌙 Good Evening
+
+🎉 Happy New Month
+
+🎂 Happy Birthday
+
+Use WAT (GMT+1).
+
+Send each greeting only once.
+
+Personalize every greeting with:
+
+NuelzDigitalz
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# IQ Option Quick Access
+
+Telegram and Web Dashboard must both include:
+
+🚀 Open IQ Option
+
+Selecting it should open the IQ Option website.
+
+If the application is installed, the device may open the app automatically.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Web Dashboard
+
+Modern responsive interface.
+
+Include:
+
+Live Scanner
+
+Market Status
+
+Recent Opportunities
+
+Signal History
+
+Performance
+
+News Status
+
+AI Activity
+
+Confidence Statistics
+
+IQ Option Quick Access
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Logging
+
+Log:
+
+Scanning
+
+Errors
+
+Telegram Activity
+
+Authentication
+
+News Pause
+
+Signal Generation
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Error Handling
+
+Handle:
+
+API failures
+
+Timeouts
+
+Network issues
+
+Invalid responses
+
+Telegram disconnects
+
+Recover automatically whenever possible.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Future Ready
+
+Structure the project for future support of:
+
+MetaTrader 5
+
+Additional market data providers
+
+Mobile App
+
+Advanced AI Models
+
+Admin Dashboard
+
+Multi-user support
+
+Broker-independent architecture
+
+Maintain clean, scalable, production-quality code with clear comments and professional coding standards.

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nuelz Binary AI — Sign In</title>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<div class="login-wrap">
+  <div class="login-card">
+    <span class="brand-mark" style="display:inline-flex;">Nz</span>
+    <h1>Nuelz Binary AI</h1>
+    <p>Enter the master password to view live signals.</p>
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+    <form method="post">
+      <input type="password" name="password" placeholder="Master password" autofocus required />
+      <button type="submit">Unlock Dashboard</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>

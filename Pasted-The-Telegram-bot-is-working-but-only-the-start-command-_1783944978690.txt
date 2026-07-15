@@ -1,0 +1,118 @@
+The Telegram bot is working, but only the /start command has been implemented.
+
+Now complete the project by implementing the full AI market analysis engine.
+
+Requirements:
+
+- Implement the /signal command.
+- Connect to the Twelve Data API.
+- Fetch the latest candle data for EURUSD, GBPUSD, AUDUSD, and USDCAD.
+- Calculate RSI (7), EMA 50, EMA 200, and MACD.
+- Analyze market strength and volatility.
+- Generate an AI confidence score from 0–100%.
+- Select only the strongest setup with a confidence score of 80% or higher.
+- If no setup qualifies, send a professional "No high-confidence setup found" message.
+- Include proper error handling and logging.
+
+## Telegram Message Design
+
+Every message should look like it was created by a premium AI trading assistant.
+
+Use clean spacing, section headers, emojis, and formatting.
+
+Never send plain text that is difficult to read.
+
+### While Scanning
+
+🔍 Nuelz Forex AI
+
+━━━━━━━━━━━━━━━━━━
+
+🤖 Scanning the Forex market...
+
+📊 Checking:
+• EUR/USD
+• GBP/USD
+• AUD/USD
+• USD/CAD
+
+📈 Analyzing:
+✅ RSI Momentum
+✅ EMA Trend
+✅ MACD Confirmation
+✅ Market Strength
+✅ Volatility
+
+⏳ Please wait...
+
+━━━━━━━━━━━━━━━━━━
+
+### Trade Signal
+
+🚨 TRADE NOW!! 🚨
+
+━━━━━━━━━━━━━━━━━━
+
+📈 Asset: EUR/USD
+
+🟩 Direction: BUY
+
+⏰ Recommended Duration: 15 Minutes
+
+🕒 Entry Time: 14:35
+
+🤖 AI Confidence: 91%
+
+━━━━━━━━━━━━━━━━━━
+
+📊 Technical Analysis
+
+✅ RSI: Oversold (22.4)
+
+✅ EMA 50: Bullish
+
+✅ EMA 200: Bullish
+
+✅ MACD: Bullish Crossover
+
+📈 Market Strength: Strong Uptrend
+
+━━━━━━━━━━━━━━━━━━
+
+⚠️ Risk Level: Medium
+
+💡 AI Summary:
+The market shows strong bullish momentum with multiple indicator confirmations. This setup meets the required confidence threshold.
+
+━━━━━━━━━━━━━━━━━━
+
+### No Signal
+
+🤖 Nuelz Forex AI
+
+━━━━━━━━━━━━━━━━━━
+
+📊 Market analysis complete.
+
+❌ No high-confidence trading opportunity was found.
+
+Current market conditions do not meet the AI confidence requirement.
+
+🕒 Please check again later.
+
+━━━━━━━━━━━━━━━━━━
+
+### Bot Style
+
+The assistant should always sound like a premium AI trading platform.
+
+Messages must be:
+
+- Professional
+- Clean and well spaced
+- Easy to read
+- Modern
+- Visually attractive
+- Consistent in formatting
+
+Never promise guaranteed profits or guaranteed winning trades. Present every signal as an analysis and recommendation for the user to evaluate before making a trading decision.

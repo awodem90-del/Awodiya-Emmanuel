@@ -1,0 +1,158 @@
+Continue improving Nuelz Forex AI Assistant.
+
+The current AI is too conservative and rarely produces trading opportunities. Redesign the analysis engine to provide more useful market insights while maintaining high-quality signal selection.
+
+## Smarter AI Decision System
+
+Do not rely solely on RSI, EMA, and MACD.
+
+Use a combination of:
+
+- RSI (7)
+- EMA 50
+- EMA 200
+- MACD
+- Price Action
+- Support and Resistance
+- Trend Strength
+- Volatility
+- Candlestick Pattern Recognition
+- Multi-Timeframe Analysis
+
+The AI should combine all available evidence before making a recommendation.
+
+━━━━━━━━━━━━━━━━━━
+
+## Multi-Level Confidence System
+
+Instead of only producing signals above one threshold, classify every opportunity into one of three categories.
+
+### 🟢 High Confidence (85–100%)
+
+This is the strongest category.
+
+Display:
+
+🔥 HIGH CONFIDENCE TRADE
+
+These setups have the highest level of technical confirmation.
+
+━━━━━━━━━━━━━━━━━━
+
+### 🟡 Medium Confidence (70–84%)
+
+Display:
+
+⚡ GOOD TRADING OPPORTUNITY
+
+Explain which indicators support the trade and which confirmations are still missing.
+
+━━━━━━━━━━━━━━━━━━
+
+### 🔵 Watchlist (60–69%)
+
+Display:
+
+👀 WATCHLIST
+
+This is not yet a recommended trade.
+
+Explain why the market is interesting and what conditions would increase confidence.
+
+━━━━━━━━━━━━━━━━━━
+
+## Continuous Scanning
+
+The AI must continuously scan the market every 30–60 seconds.
+
+Keep updating internal analysis in the background.
+
+Do not send automatic trading signals unless enabled by the owner.
+
+When the user presses /signal, immediately return the latest and strongest available opportunities.
+
+━━━━━━━━━━━━━━━━━━
+
+## Better Signal Selection
+
+If multiple currency pairs qualify, rank them from strongest to weakest.
+
+Return only the number of signals requested by the user.
+
+Never generate low-quality signals just to fill the requested number.
+
+If the user requests three signals but only one qualifies, return that one signal and explain that no additional setups currently meet the confidence requirements.
+
+━━━━━━━━━━━━━━━━━━
+
+## Signal Explanation
+
+Every recommendation must explain WHY it was selected.
+
+Example:
+
+📊 AI Analysis
+
+✅ RSI indicates oversold momentum.
+
+✅ Price is above both EMA 50 and EMA 200.
+
+✅ MACD shows bullish momentum.
+
+✅ Market trend is strong.
+
+✅ Volatility supports potential continuation.
+
+💡 AI Summary:
+
+This setup has multiple technical confirmations across different indicators, making it one of the strongest opportunities currently available. This is an analysis, not a guarantee of market direction.
+
+━━━━━━━━━━━━━━━━━━
+
+## Market Status
+
+If no High Confidence trades exist, do not simply say "No signal."
+
+Instead, show the best current market overview.
+
+Example:
+
+📊 Market Overview
+
+EUR/USD — 82% (Good Opportunity)
+
+GBP/USD — 68% (Watchlist)
+
+AUD/USD — 55% (No Setup)
+
+USD/CAD — 74% (Good Opportunity)
+
+This gives the user useful information even when there is no top-tier trade.
+
+━━━━━━━━━━━━━━━━━━
+
+## Learning and Performance Tracking
+
+Store every generated signal and its outcome (when outcome data becomes available).
+
+Track:
+
+- Date
+- Asset
+- Direction
+- Confidence Score
+- Indicators Used
+- Suggested Duration
+- Result (if available)
+
+Use this data to generate performance reports and improve future versions of the AI.
+
+━━━━━━━━━━━━━━━━━━
+
+## Reliability
+
+The assistant must never promise guaranteed profits or guaranteed winning trades.
+
+Its purpose is to identify the strongest available opportunities, explain the reasoning behind each recommendation, and help the user make informed trading decisions.
+
+Focus on consistency, transparency, and professional-quality market analysis rather than generating frequent signals.
